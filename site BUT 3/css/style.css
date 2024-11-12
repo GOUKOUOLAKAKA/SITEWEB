@@ -1,0 +1,364 @@
+/* Reset de base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('file:///E:/donnee%20sauvegardees/cours/site%20BUT%203/images/background.png') no-repeat center center fixed;
+    background-size: cover; /* Permet à l'image de couvrir tout le fond */
+    background-position: center center; /* Centrer l'image */
+    background-attachment: fixed; /* Rendre l'image fixe lors du défilement */
+    height: 100vh; /* La hauteur de la fenêtre */
+    display: flex; /* Utilisation de Flexbox pour centrer les éléments */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    background-attachment: fixed; /* Fixer l'image de fond lors du défilement */
+
+
+}
+
+h1, h2 {
+    color: #0044cc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #FFFFFF;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar li a {
+    color: #black;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #ff007f;
+}
+
+/* Sections */
+main {
+    padding: 100px 20px;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le cadre */
+    padding: 20px 40px; /* Espace autour du texte */
+    text-align: center; /* Centrer le texte */
+    color: white;
+    font-size: 2rem; /* Taille de police confortable */
+    border-radius: 10px; /* Bord arrondi pour le cadre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre autour du cadre */
+    max-width: 90%; /* Largeur maximale du cadre */
+    max-height: 80%; /* Hauteur maximale du cadre */
+    overflow: hidden; /* Empêche le texte de dépasser si la taille est trop grande */
+}
+
+
+
+.hero h1 {
+  color: white; /* Titre en blanc */
+  font-size: 3rem; /* Taille du titre */
+  font-weight: bold; /* Met en gras */
+  text-align: center; /* Centre le titre horizontalement */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: white;
+    color: #ff007f;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #ff007f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #ff007f; /* Fond du bouton devient rose au survol */
+  color: white; /* Texte devient blanc au survol */
+  border-color: #ff007f; /* Bordure reste rose */
+}
+
+/* Page spécifiques */
+.about, .cv, .portfolio, .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about img, .cv img, .portfolio img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #002288;
+}
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0044cc;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #002288;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scale-up {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleUp 0.5s forwards;
+}
+
+@keyframes scaleUp {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 0.7s forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Style pour la section À propos */
+.about {
+  display: flex;
+  flex-direction: column; /* Met les éléments en colonne */
+  justify-content: flex-start; /* Aligne les éléments en haut */
+  align-items: center; /* Centre les éléments horizontalement */
+  padding: 40px;
+  gap: 40px; /* Ajoute un espace entre les éléments */
+}
+
+/* Conteneur pour la photo et la bulle */
+.profile-container {
+    display: flex; /* Utilise Flexbox pour mettre la photo et la bulle côte à côte */
+    align-items: flex-start; /* Aligne les éléments au début (top) pour que la bulle s'adapte à la photo */
+    gap: 20px; /* Ajoute un espace entre la photo et la bulle */
+}
+
+/* Style de la photo de profil */
+.profile-photo {
+    width: 154px; /* Garde la largeur de la photo */
+    height: 200px; /* Garde la hauteur de la photo */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour la bulle de texte */
+.speech-bubble {
+    position: relative;
+    background: #f0f0f5;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le texte verticalement dans la bulle */
+    min-height: 150px; /* Force la bulle à avoir au moins la même hauteur que la photo */
+}
+
+/* Style du texte dans la bulle */
+.speech-bubble p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Ajouter un triangle pour simuler la pointe de la bulle */
+.speech-bubble::before {
+    content: "";
+    position: absolute;
+    left: -20px; /* Ajuste cette valeur pour positionner le triangle */
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: #f0f0f5;
+}
+
+
+/* Section CV */
+.cv-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cv-section h2 {
+    font-size: 2rem;
+    color: #ff007f;
+    margin-bottom: 20px;
+}
+
+.cv-text h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cv-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton de téléchargement du CV */
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff007f;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff4f8b;
+}
+
+/* Carousel styles */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel .prev, .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel .prev:hover, .carousel .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
